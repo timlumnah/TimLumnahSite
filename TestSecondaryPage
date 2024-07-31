@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Events Newsletter</title>
+  <style>
+    .event-button {
+      display: block;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 8px;
+      background-color: #f9f9f9;
+      text-align: left;
+      font-size: 1em;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .event-title {
+      font-size: 1.0em;
+      margin: 0;
+    }
+
+    .event-date {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .event-container {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="event-container">
+    <li>
+      <a href="https://www.eventbrite.com/e/candy-bingo-and-games-tickets-929811761007?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Candy Bingo & Games</div>
+        <div class="event-date">August 2</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/terah-shelton-harris-tickets-924704956417?aff=ebdsshcopyurl&amp;utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=" class="event-button">
+        <div class="event-title">Terah Shelton Harris</div>
+        <div class="event-date">August 5</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/greer-macallister-with-heather-webb-tickets-911502066217?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Greer Macallister</div>
+        <div class="event-date">August 7</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/mark-erelli-an-evening-to-support-baypath-humane-society-tickets-940710860507?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Mark Erelli: Baypath Humane Society</div>
+        <div class="event-date">August 9</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/dedham-firefighters-3rd-annual-golf-tournament-tickets-920813045607?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Dedham Firefighters Golf Tournament</div>
+        <div class="event-date">August 9</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/touch-a-truck-a-tractor-tickets-936630746777?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Touch a Truck & a Tractor</div>
+        <div class="event-date">August 10</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/lucy-burdette-sarah-stewart-taylor-with-hank-phillippi-ryan-tickets-921734932997?aff=ebdsshcopyurl&amp;utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=" class="event-button">
+        <div class="event-title">Lucy Burdette & Sarah Stewart Taylor with Hank Phillippi Ryan</div>
+        <div class="event-date">August 13</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/jordan-ifueko-with-melissa-caruso-tickets-920365948327?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Jordan Ifueko with Melissa Caruso</div>
+        <div class="event-date">August 15</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/byd-fest-tickets-952038140707?aff=ebdsshcopyurl&amp;utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=" class="event-button">
+        <div class="event-title">BYD Fest</div>
+        <div class="event-date">August 16</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/areaa-driven-driving-experience-sponsored-by-eastern-bank-tickets-950008560177?aff=ebdsshcopyurl&amp;utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=" class="event-button">
+        <div class="event-title">AREAA Driven Driving Experience</div>
+        <div class="event-date">August 16</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/krv-for-als-tickets-906215132857?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">KRV for ALS</div>
+        <div class="event-date">August 17</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/petty-larceny-at-start-line-brewing-81724-6-9pm-tickets-913908875047?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Pettery Larceny at Start Line Brewing</div>
+        <div class="event-date">August 17</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/tj-newman-tickets-929340060137?aff=ebdsshcopyurl&amp;utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=" class="event-button">
+        <div class="event-title">T.J. Newman</div>
+        <div class="event-date">August 17</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/august-metrowest-business-networking-event-wmass-professional-networking-tickets-926227349937?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Business Networking at Skybokx109</div>
+        <div class="event-date">August 20</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/teddy-and-the-long-shots-tickets-927938273027?aff=ebdsshcopyurl&amp;utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=" class="event-button">
+        <div class="event-title">Teddy and the Long Shots</div>
+        <div class="event-date">August 22</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/newton-free-library-1st-annual-golf-tournament-tickets-943096260357?aff=ebdsshcopyurl&amp;utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=" class="event-button">
+        <div class="event-title">Newton Free Library Golf Tournament</div>
+        <div class="event-date">August 24</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/halfway-to-st-patricks-day-tickets-923312350437?aff=ebdsshcopyurl&amp;utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=" class="event-button">
+        <div class="event-title">Halfway to St. Patrick's Day</div>
+        <div class="event-date">August 24</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/jonathan-evans-brief-book-tour-signing-with-spencer-williams-tickets-925671491037?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Jonathan Evans Book Tour</div>
+        <div class="event-date">August 26</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/cambridge-restaurant-week-tickets-922674227887?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Cambridge Restaurant Week</div>
+        <div class="event-date">August 26</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/kidney-walk-2024-tickets-946835160437?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="event-button">
+        <div class="event-title">Kidney Walk 2024</div>
+        <div class="event-date">August 30</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/donnie-chesnut-with-paul-febus-tickets-908389558347?aff=ebdsshcopyurl&amp;utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=" class="event-button">
+        <div class="event-title">Donnie Chesnut with Paul Febus</div>
+        <div class="event-date">August 31</div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.eventbrite.com/e/ultimate-tiki-party-tickets-935776223027?aff=ebdsshcopyurl&amp;utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=" class="event-button">
+        <div class="event-title">Ultimate Tiki Party</div>
+        <div class="event-date">August 31</div>
+      </a>
+    </li>
+  </ul>
+</body>
+
+</html>
