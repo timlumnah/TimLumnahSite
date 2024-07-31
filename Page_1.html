@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Lumnah - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        header img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+        header h1 {
+            margin: 10px 0 0;
+        }
+        section {
+            padding: 20px;
+        }
+        .embed-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            margin-bottom: 20px;
+        }
+        .embed-container iframe,
+        .embed-container object,
+        .embed-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .portfolio,
+        .articles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .portfolio > div,
+        .articles > div {
+            flex: 1;
+            min-width: 300px;
+            max-width: 100%;
+        }
+        @media (max-width: 768px) {
+            .portfolio > div,
+            .articles > div {
+                min-width: 100%;
+            }
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Headshot.html" alt="Tim Lumnah Headshot">
+        <h1>Tim Lumnah</h1>
+    </header>
+    <section>
+        <h2>Professional Profiles</h2>
+        <div class="embed-container">
+            <iframe src="https://www.linkedin.com/in/tim-lumnah" frameborder="0"></iframe>
+        </div>
+        <div class="embed-container">
+            <iframe src="https://github.com/timlumnah" frameborder="0"></iframe>
+        </div>
+        <div class="embed-container">
+            <iframe src="https://profile.indeed.com/p/timl-0yta5s2" frameborder="0"></iframe>
+        </div>
+        <div class="embed-container">
+            <iframe src="https://dot.cards/timlumnahrealtor" frameborder="0"></iframe>
+        </div>
+    </section>
+    <section>
+        <h2>Portfolio</h2>
+        <div class="portfolio">
+            <div class="embed-container">
+                <iframe src="https://www.bhhspagerealty.com" frameborder="0"></iframe>
+            </div>
+            <div class="embed-container">
+                <iframe src="https://www.youtube.com/bhhspagerealty" frameborder="0"></iframe>
+            </div>
+            <div class="embed-container">
+                <iframe src="https://joinpagerealty.com" frameborder="0"></iframe>
+            </div>
+            <div class="embed-container">
+                <iframe src="https://pagerealty.github.io/Connect" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Featured Articles</h2>
+        <div class="articles">
+            <div class="embed-container">
+                <iframe src="https://www.realtor.com/advice/buy/reasons-pending-sales-fall-through-in-real-estate/" frameborder="0"></iframe>
+            </div>
+            <div class="embed-container">
+                <iframe src="https://www.gobankingrates.com/money/financial-planning/are-gen-z-millennials-destined-to-live-with-roommates-forever/" frameborder="0"></iframe>
+            </div>
+            <div class="embed-container">
+                <iframe src="https://www.gobankingrates.com/investing/real-estate/pocket-listing-should-you-consider-when-selling-home/" frameborder="0"></iframe>
+            </div>
+            <div class="embed-container">
+                <iframe src="https://finance.yahoo.com/news/gen-z-millennials-destined-live-150029553.html" frameborder="0"></iframe>
+            </div>
+            <div class="embed-container">
+                <iframe src="https://massbuyeragents.org/massachusetts-real-estate-agents/2022/07/08/reasons-pending-sales-fall-through-in-real-estate-massachusetts-homebuyers-homeownership-2/" frameborder="0"></iframe>
+            </div>
+            <div class="embed-container">
+                <iframe src="https://money.ca/investing/investing-basics/housing-selling-mortgages" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Tim Lumnah</p>
+    </footer>
+</body>
+</html>
