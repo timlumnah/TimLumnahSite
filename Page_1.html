@@ -52,13 +52,21 @@
         .articles {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 10px; /* Adjust gap to control space between items */
         }
         .portfolio > div,
         .articles > div {
             flex: 1;
             min-width: 300px;
             max-width: 100%;
+        }
+        .articles > div {
+            flex: 1 1 200px; /* Allows images to shrink to fit side by side */
+            max-width: 100%;
+        }
+        .articles img {
+            width: 100%; /* Make sure images fill their container */
+            height: auto;
         }
         @media (max-width: 768px) {
             .portfolio > div,
@@ -101,43 +109,30 @@
         <div class="articles">
             <div class="embed-container">
                 <a href="https://www.realtor.com/advice/buy/reasons-pending-sales-fall-through-in-real-estate/" target="_blank">
-                <img src="./Realtor.png" alt="Realtor.com">
+                    <img src="./Realtor.png" alt="Realtor.com">
                 </a>
-                <!-- <iframe src="https://www.realtor.com/advice/buy/reasons-pending-sales-fall-through-in-real-estate/" frameborder="0"></iframe> -->
             </div>
             <div class="embed-container">
                 <a href="https://www.gobankingrates.com/money/financial-planning/are-gen-z-millennials-destined-to-live-with-roommates-forever/" target="_blank">
-                  <img src="./GoBanking.png" alt="Go Banking Rates">
+                    <img src="./GoBanking.png" alt="Go Banking Rates">
                 </a>
-                <!-- <iframe src="https://www.gobankingrates.com/money/financial-planning/are-gen-z-millennials-destined-to-live-with-roommates-forever/" frameborder="0"></iframe>
-                -->
-            </div>
-            <!--
-            <div class="embed-container">
-                <iframe src="https://www.gobankingrates.com/investing/real-estate/pocket-listing-should-you-consider-when-selling-home/" frameborder="0"></iframe>
-            -->
             </div>
             <div class="embed-container">
                 <a href="https://finance.yahoo.com/news/gen-z-millennials-destined-live-150029553.html" target="_blank">
-                <img src="./MABuyer.png" alt="MA Buyer Agents">
+                    <img src="./MABuyer.png" alt="MA Buyer Agents">
                 </a>
-                <!-- 
-                <iframe src="https://finance.yahoo.com/news/gen-z-millennials-destined-live-150029553.html" frameborder="0"></iframe>
-                -->
             </div>
             <div class="embed-container">
                 <a href="https://massbuyeragents.org/massachusetts-real-estate-agents/2022/07/08/reasons-pending-sales-fall-through-in-real-estate-massachusetts-homebuyers-homeownership-2/" target="_blank">
-                <img src="./Yahoo.png" alt="Yahoo">
+                    <img src="./Yahoo.png" alt="Yahoo">
                 </a>
-                <!--               
-                <iframe src="https://massbuyeragents.org/massachusetts-real-estate-agents/2022/07/08/reasons-pending-sales-fall-through-in-real-estate-massachusetts-homebuyers-homeownership-2/" frameborder="0"></iframe>
-                -->
             </div>
             <div class="embed-container">
                 <iframe src="https://money.ca/investing/investing-basics/housing-selling-mortgages" frameborder="0"></iframe>
             </div>
         </div>
     </section>
+   
     <section>
         <h2>Professional Profiles</h2>
         <div class="embed-container">
