@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tim Lumnah - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    header, footer {
+      background-color: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header img {
+      max-width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .button-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #00bfff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+    section {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .card, .embed {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 1rem;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .embed iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 4px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./TimLumnahHeadshot.png" alt="Tim Lumnah Headshot">
+    <h1>Tim Lumnah</h1>
+    <p><a class="button-link" href="https://dot.cards/timlumnah" target="_blank">eBusiness Card</a></p>
+  </header>
+
+  <section>
+    <h2>Portfolio</h2>
+    <div class="grid">
+      <div class="embed">
+        <iframe src="https://www.bhhspagerealty.com"></iframe>
+      </div>
+      <div class="embed">
+        <iframe src="https://www.youtube.com/embed/FQPfDTAblWA?si=0BHJyaF5mTuf89Kw" allowfullscreen></iframe>
+      </div>
+      <div class="embed">
+        <iframe src="https://pagerealty.github.io/Connect"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Articles</h2>
+    <div class="grid">
+      <a class="card" href="https://www.realtor.com/advice/buy/reasons-pending-sales-fall-through-in-real-estate/" target="_blank">
+        <img src="./Realtor.png" alt="Realtor.com">
+      </a>
+      <a class="card" href="https://www.gobankingrates.com/money/financial-planning/are-gen-z-millennials-destined-to-live-with-roommates-forever/" target="_blank">
+        <img src="./GoBanking.png" alt="GoBankingRates">
+      </a>
+      <a class="card" href="https://finance.yahoo.com/news/gen-z-millennials-destined-live-150029553.html" target="_blank">
+        <img src="./MABuyer.png" alt="Yahoo Finance">
+      </a>
+      <a class="card" href="https://massbuyeragents.org/massachusetts-real-estate-agents/2022/07/08/reasons-pending-sales-fall-through-in-real-estate-massachusetts-homebuyers-homeownership-2/" target="_blank">
+        <img src="./Yahoo.png" alt="Mass Buyer Agents">
+      </a>
+      <div class="embed">
+        <iframe src="https://money.ca/investing/investing-basics/housing-selling-mortgages"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Professional Profiles</h2>
+    <div class="grid">
+      <a class="card" href="https://www.linkedin.com/in/tim-lumnah" target="_blank">
+        <img src="./LinkedIn.png" alt="LinkedIn Profile">
+      </a>
+      <a class="card" href="https://profile.indeed.com/p/timl-0yta5s2" target="_blank">
+        <img src="./Indeed.png" alt="Indeed Profile">
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tim Lumnah</p>
+  </footer>
+</body>
+</html>
