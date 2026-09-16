@@ -3,137 +3,331 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tim Lumnah</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Tim Lumnah — Real Estate</title>
+  <meta name="description" content="Tim Lumnah — real estate professional with work featured in Realtor.com, Yahoo Finance, and GO BankingRates. Explore projects, press coverage, and profiles.">
+  <meta property="og:title" content="Tim Lumnah">
+  <meta property="og:description" content="Real estate professional — projects, press coverage, and professional profiles.">
+  <meta property="og:image" content="./headshot.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --navy: #132837;
+      --navy-soft: #1d3a50;
+      --gold: #b98a2f;
+      --gold-light: #e8d5ae;
+      --paper: #faf8f4;
+      --ink: #22303a;
+      --muted: #5d6f7c;
+      --line: #e5ddd0;
+      --card-shadow: 0 1px 2px rgba(19,40,55,.06), 0 8px 24px rgba(19,40,55,.07);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #222;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
     }
-    header, footer {
-      background-color: #1e1e1e;
-      color: white;
+    h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; line-height: 1.15; }
+    a { color: inherit; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      background:
+        radial-gradient(1100px 500px at 85% -10%, rgba(185,138,47,.28), transparent 60%),
+        linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%);
+      color: #fff;
+      padding: 5.5rem 1.5rem 6.5rem;
       text-align: center;
-      padding: 2rem 1rem;
+      position: relative;
     }
-    header img {
-      max-width: 120px;
+    .hero::after {
+      content: "";
+      position: absolute; left: 0; right: 0; bottom: -1px; height: 56px;
+      background: var(--paper);
+      clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    }
+    .hero .avatar {
+      width: 148px; height: 148px;
       border-radius: 50%;
-      margin-bottom: 1rem;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,.9);
+      box-shadow: 0 0 0 7px rgba(232,213,174,.25), 0 18px 40px rgba(0,0,0,.35);
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    .button-link {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #00bfff;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 3.4rem);
       font-weight: 600;
-      margin-top: 0.5rem;
+      margin: 1.25rem 0 .5rem;
+      letter-spacing: -.01em;
     }
-    section {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    .hero .rule {
+      width: 64px; height: 3px;
+      background: var(--gold);
+      border: 0;
+      margin: 0 auto 1.1rem;
+      border-radius: 2px;
     }
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+    .hero .tagline {
+      color: var(--gold-light);
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin: 0 auto 2rem;
+      max-width: 34rem;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
+    .hero-actions { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .72rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 600; font-size: .95rem;
+      text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
     }
-    .card, .embed {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      padding: 1rem;
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--gold); color: #1c1305; box-shadow: 0 6px 18px rgba(185,138,47,.35); }
+    .btn-primary:hover { background: #c9973b; }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,.45); color: #fff; }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+    /* ---------- Layout ---------- */
+    main { max-width: 1040px; margin: -1.5rem auto 0; padding: 0 1.5rem 3rem; position: relative; }
+    section { margin-top: 4.25rem; }
+    .eyebrow {
+      font-size: .78rem; font-weight: 700;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 .35rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .section-title {
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
+      font-weight: 600;
+      color: var(--navy);
+      margin: 0 0 1.6rem;
+    }
+
+    /* ---------- Press cards ---------- */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.1rem; }
+    .grid.two { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }
+    @media (max-width: 880px) { .grid.two { grid-template-columns: 1fr; } }
+    .press-card {
+      display: flex; flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.4rem 1.4rem 1.2rem;
+      text-decoration: none;
+      box-shadow: var(--card-shadow);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .press-card:hover { transform: translateY(-4px); box-shadow: 0 4px 8px rgba(19,40,55,.08), 0 16px 36px rgba(19,40,55,.12); }
+    .press-card .pub {
+      font-weight: 700; font-size: .82rem;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: .6rem;
+    }
+    .press-card .pub b { color: var(--navy); font-size: .95rem; letter-spacing: .02em; text-transform: none; }
+    .press-card h3 {
+      font-size: 1.12rem; font-weight: 600;
+      color: var(--navy);
+      margin: 0 0 .9rem;
+      flex-grow: 1;
+    }
+    .press-card .more {
+      color: #8a6420; font-weight: 600; font-size: .9rem;
+    }
+    .press-card .more::after { content: " →"; transition: margin .15s ease; }
+    .press-card:hover .more::after { margin-left: 4px; }
+
+    /* ---------- Projects ---------- */
+    .project {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      display: flex; flex-direction: column;
+      transition: transform .18s ease, box-shadow .18s ease;
+      text-decoration: none;
+    }
+    .project:hover { transform: translateY(-4px); box-shadow: 0 4px 8px rgba(19,40,55,.08), 0 16px 36px rgba(19,40,55,.12); }
+    .project .thumb {
+      aspect-ratio: 16 / 9;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      background: linear-gradient(150deg, var(--navy) 0%, var(--navy-soft) 100%);
+      position: relative;
+    }
+    .project .thumb.gold { background: linear-gradient(150deg, #8a6420 0%, var(--gold) 100%); }
+    .project .thumb span {
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem; font-weight: 600;
+      padding: 0 1rem; text-align: center;
+    }
+    .project iframe { width: 100%; aspect-ratio: 16/9; border: 0; display: block; }
+    .project .body { padding: 1.1rem 1.3rem 1.25rem; }
+    .project h3 { margin: 0 0 .3rem; font-size: 1.15rem; color: var(--navy); font-weight: 600; }
+    .project p { margin: 0 0 .7rem; color: var(--muted); font-size: .93rem; }
+    .project .more { color: #8a6420; font-weight: 600; font-size: .9rem; }
+    .project .more::after { content: " →"; }
+    .thumb.video {
+      background:
+        radial-gradient(500px 260px at 50% 120%, rgba(208,0,0,.35), transparent 65%),
+        linear-gradient(150deg, var(--navy) 0%, var(--navy-soft) 100%);
+      gap: .8rem; flex-direction: column;
+    }
+    .thumb.video .play {
+      width: 58px; height: 58px; border-radius: 50%;
+      background: rgba(208,0,0,.92);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,.4);
+    }
+    .thumb.video .play::after {
+      content: ""; display: block; margin-left: 5px;
+      border-left: 18px solid #fff;
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+    }
+    .thumb.video .ytlabel {
+      font-family: 'Inter', sans-serif; font-size: .8rem; font-weight: 600;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.6);
+    }
+
+    /* ---------- Profiles ---------- */
+    .profile-card {
+      display: flex; align-items: center; gap: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.15rem 1.3rem;
+      text-decoration: none;
+      box-shadow: var(--card-shadow);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .profile-card:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(19,40,55,.08), 0 14px 30px rgba(19,40,55,.12); }
+    .profile-card .mono {
+      flex: 0 0 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.05rem; color: #fff;
+    }
+    .mono.li { background: #0a66c2; }
+    .mono.in { background: #2577e3; }
+    .profile-card b { display: block; color: var(--navy); font-size: 1rem; }
+    .profile-card small { color: var(--muted); }
+
+    /* ---------- Footer ---------- */
+    footer {
+      margin-top: 5rem;
+      background: var(--navy);
+      color: #b9c9d4;
       text-align: center;
+      padding: 2.4rem 1.5rem 2.6rem;
+      font-size: .9rem;
     }
-    .card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-    }
-    .embed iframe {
-      width: 100%;
-      height: 200px;
-      border: none;
-      border-radius: 4px;
-    }
-    footer p {
-      margin: 0;
-      font-size: 0.9rem;
-    }
+    footer .foot-rule { width: 48px; height: 3px; background: var(--gold); border: 0; margin: 0 auto 1.1rem; border-radius: 2px; }
+    footer a { color: var(--gold-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <header>
-    <img src="./TimLumnahHeadshot.png" alt="Tim Lumnah Headshot">
+  <header class="hero">
+    <img class="avatar" src="./headshot.jpg" alt="Portrait of Tim Lumnah">
     <h1>Tim Lumnah</h1>
-    <p><a class="button-link" href="https://dot.cards/timlumnah" target="_blank">eBusiness Card</a></p>
+    <hr class="rule">
+    <p class="tagline">Real estate professional &mdash; helping buyers and sellers with clarity, and writing about the housing market along the way.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://dot.cards/timlumnah" target="_blank" rel="noopener">eBusiness Card</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/tim-lumnah" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
   </header>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="embed">
-        <iframe src="https://www.bhhspagerealty.com"></iframe>
+  <main>
+    <section id="press">
+      <p class="eyebrow">In the News</p>
+      <h2 class="section-title">Featured Articles</h2>
+      <div class="grid two">
+        <a class="press-card" href="https://www.realtor.com/advice/buy/reasons-pending-sales-fall-through-in-real-estate/" target="_blank" rel="noopener">
+          <p class="pub"><b>Realtor.com</b> &middot; Aug 2022</p>
+          <h3>5 Reasons Pending Sales Fall Through in Real Estate</h3>
+          <span class="more">Read article</span>
+        </a>
+        <a class="press-card" href="https://finance.yahoo.com/news/gen-z-millennials-destined-live-150029553.html" target="_blank" rel="noopener">
+          <p class="pub"><b>Yahoo Finance</b> &middot; Dec 2022</p>
+          <h3>Are Gen&nbsp;Z and Millennials Destined To Live With Roommates Forever?</h3>
+          <span class="more">Read article</span>
+        </a>
+        <a class="press-card" href="https://www.gobankingrates.com/money/financial-planning/are-gen-z-millennials-destined-to-live-with-roommates-forever/" target="_blank" rel="noopener">
+          <p class="pub"><b>GO BankingRates</b> &middot; Dec 2022</p>
+          <h3>Are Gen&nbsp;Z and Millennials Destined To Live With Roommates Forever?</h3>
+          <span class="more">Read article</span>
+        </a>
+        <a class="press-card" href="https://massbuyeragents.org/massachusetts-real-estate-agents/2022/07/08/reasons-pending-sales-fall-through-in-real-estate-massachusetts-homebuyers-homeownership-2/" target="_blank" rel="noopener">
+          <p class="pub"><b>MA Assn. of Buyer Agents</b> &middot; Jul 2022</p>
+          <h3>Reasons Pending Sales Fall Through in Real Estate</h3>
+          <span class="more">Read article</span>
+        </a>
       </div>
-      <div class="embed">
-        <iframe src="https://www.youtube.com/embed/FQPfDTAblWA?si=0BHJyaF5mTuf89Kw" allowfullscreen></iframe>
-      </div>
-      <div class="embed">
-        <iframe src="https://pagerealty.github.io/Connect"></iframe>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2>Featured Articles</h2>
-    <div class="grid">
-      <a class="card" href="https://www.realtor.com/advice/buy/reasons-pending-sales-fall-through-in-real-estate/" target="_blank">
-        <img src="./Realtor.png" alt="Realtor.com">
-      </a>
-      <a class="card" href="https://www.gobankingrates.com/money/financial-planning/are-gen-z-millennials-destined-to-live-with-roommates-forever/" target="_blank">
-        <img src="./GoBanking.png" alt="GoBankingRates">
-      </a>
-      <a class="card" href="https://finance.yahoo.com/news/gen-z-millennials-destined-live-150029553.html" target="_blank">
-        <img src="./MABuyer.png" alt="Yahoo Finance">
-      </a>
-      <a class="card" href="https://massbuyeragents.org/massachusetts-real-estate-agents/2022/07/08/reasons-pending-sales-fall-through-in-real-estate-massachusetts-homebuyers-homeownership-2/" target="_blank">
-        <img src="./Yahoo.png" alt="Mass Buyer Agents">
-      </a>
-      <div class="embed">
-        <iframe src="https://money.ca/investing/investing-basics/housing-selling-mortgages"></iframe>
+    <section id="projects">
+      <p class="eyebrow">Work</p>
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        <a class="project" href="https://www.bhhspagerealty.com" target="_blank" rel="noopener">
+          <div class="thumb"><span>BHS Page Realty</span></div>
+          <div class="body">
+            <h3>Berkshire Hathaway HomeServices Page Realty</h3>
+            <p>Brokerage website &mdash; listings, agents, and local market resources.</p>
+            <span class="more">Visit site</span>
+          </div>
+        </a>
+        <a class="project" href="https://www.youtube.com/watch?v=FQPfDTAblWA" target="_blank" rel="noopener">
+          <div class="thumb video"><span class="play"></span><span class="ytlabel">Watch on YouTube</span></div>
+          <div class="body">
+            <h3>On Video</h3>
+            <p>A recent video feature.</p>
+            <span class="more">Watch now</span>
+          </div>
+        </a>
+        <a class="project" href="https://pagerealty.github.io/Connect" target="_blank" rel="noopener">
+          <div class="thumb gold"><span>Connect</span></div>
+          <div class="body">
+            <h3>Page Realty &mdash; Connect</h3>
+            <p>Client connection tools from the Page Realty team.</p>
+            <span class="more">Open app</span>
+          </div>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2>Professional Profiles</h2>
-    <div class="grid">
-      <a class="card" href="https://www.linkedin.com/in/tim-lumnah" target="_blank">
-        <img src="./LinkedIn.png" alt="LinkedIn Profile">
-      </a>
-      <a class="card" href="https://profile.indeed.com/p/timl-0yta5s2" target="_blank">
-        <img src="./Indeed.png" alt="Indeed Profile">
-      </a>
-    </div>
-  </section>
+    <section id="profiles">
+      <p class="eyebrow">Elsewhere</p>
+      <h2 class="section-title">Professional Profiles</h2>
+      <div class="grid">
+        <a class="profile-card" href="https://www.linkedin.com/in/tim-lumnah" target="_blank" rel="noopener">
+          <span class="mono li">in</span>
+          <span><b>LinkedIn</b><small>linkedin.com/in/tim-lumnah</small></span>
+        </a>
+        <a class="profile-card" href="https://profile.indeed.com/p/timl-0yta5s2" target="_blank" rel="noopener">
+          <span class="mono in">in</span>
+          <span><b>Indeed</b><small>Indeed resume profile</small></span>
+        </a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Tim Lumnah</p>
+    <hr class="foot-rule">
+    <p>&copy; 2026 Tim Lumnah &middot; <a href="https://dot.cards/timlumnah" target="_blank" rel="noopener">dot.cards/timlumnah</a></p>
   </footer>
 </body>
 </html>
