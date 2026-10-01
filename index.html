@@ -7,7 +7,6 @@
   <meta name="description" content="Tim Lumnah: building C++/JUCE software and working toward HTB Academy's CPTS. Projects, hands-on offensive security, and press.">
   <meta property="og:title" content="Tim Lumnah: Builder &amp; Security Practitioner">
   <meta property="og:description" content="Builder and security practitioner. Software projects, offensive security work, and press.">
-  <meta property="og:image" content="./headshot.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="./favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,7 +88,7 @@
     }
     .hero .wrap {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1fr;
       gap: 2.5rem;
       align-items: center;
     }
@@ -131,23 +130,6 @@
     .btn-primary:hover { background: #ff6a3d; }
     .btn-ghost { border-color: rgba(253,251,246,.4); color: var(--cream); }
     .btn-ghost:hover { border-color: var(--cream); }
-
-    .hero .photo-wrap {
-      position: relative;
-      justify-self: end;
-      transform: rotate(-2.5deg);
-    }
-    .hero .photo-wrap img {
-      width: 100%; max-width: 260px;
-      aspect-ratio: 1/1; object-fit: cover;
-      border: 5px solid var(--accent);
-      box-shadow: 14px 14px 0 rgba(255,77,31,.18);
-    }
-    @media (max-width: 760px) {
-      .hero .wrap { grid-template-columns: 1fr; }
-      .hero .photo-wrap { justify-self: start; order: -1; }
-      .hero .photo-wrap img { max-width: 170px; }
-    }
 
     .hero-meta {
       grid-column: 1 / -1;
@@ -325,9 +307,6 @@
           <a class="btn btn-ghost" href="https://github.com/timlumnah" target="_blank" rel="noopener">GitHub</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/tim-lumnah" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-      </div>
-      <div class="photo-wrap">
-        <img src="./headshot.jpg" alt="Portrait of Tim Lumnah">
       </div>
       <div class="hero-meta">
         <div class="hero-meta-row">

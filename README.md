@@ -14,7 +14,7 @@ never actually applies. That's expected, not a bug.
 
 One page, six sections:
 
-- **Hero** — name, positioning line, headshot, education/stack summary
+- **Hero** — name, positioning line, education/stack summary
 - **Now** — short framing statement on where things stand currently
 - **Build** — Midi Repinator, KoKo (Kerbal Orbital Kompany), Otto Operator
 - **Security** — HTB Academy CPTS, Harvard Extension ethical hacking coursework,
