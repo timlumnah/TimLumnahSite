@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tim Lumnah: Builder &amp; Security Practitioner</title>
-  <meta name="description" content="Tim Lumnah: building C++/JUCE software and working toward HTB Academy's CPTS. Projects, hands-on offensive security, and press.">
+  <meta name="description" content="Tim Lumnah: AI agent tooling, self-healing test automation, and C++/JUCE software, shipped in public on GitHub, plus work toward HTB Academy's CPTS. Projects, hands-on offensive security, and press.">
   <meta property="og:title" content="Tim Lumnah: Builder &amp; Security Practitioner">
-  <meta property="og:description" content="Builder and security practitioner. Software projects, offensive security work, and press.">
+  <meta property="og:description" content="Builder and security practitioner. AI agent projects with published evals, software, offensive security work, and press.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -301,7 +301,7 @@
       <div>
         <p class="kicker">Software Builder · Security Practitioner</p>
         <h1>Tim<br>Lumnah</h1>
-        <p class="sub">I write C++, ship real software in the open, and work toward Hack&nbsp;The&nbsp;Box Academy's CPTS. Methodology and reporting included, not just the shell.</p>
+        <p class="sub">I build AI agent systems with guardrails and evals you can rerun, ship real software in the open, and work toward Hack&nbsp;The&nbsp;Box Academy's CPTS. Methodology and reporting included, not just the shell.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#build">See the work</a>
           <a class="btn btn-ghost" href="https://github.com/timlumnah" target="_blank" rel="noopener">GitHub</a>
@@ -316,7 +316,7 @@
         <div class="hero-meta-row">
           <span class="hero-meta-label">Stack</span>
           <span class="tags">
-            <span class="tag">Python</span><span class="tag">C++</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">AWS</span><span class="tag">SQL</span><span class="tag">LLM Agents</span>
+            <span class="tag">Python</span><span class="tag">C++</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">AWS</span><span class="tag">SQL</span><span class="tag">LLM Agents</span><span class="tag">Playwright</span><span class="tag">SQLite</span>
           </span>
         </div>
       </div>
@@ -326,7 +326,7 @@
   <section id="now" class="on-paper">
     <div class="wrap">
       <p class="eyebrow"><span class="num">01</span> Now</p>
-      <p class="pull">Five years owning IT and marketing systems for a real estate brokerage taught me I liked building the tools more than closing the deals. Now I'm working through Harvard Extension School coursework and a <b>Hack The Box Academy CPTS</b> path, while shipping software publicly. A MIDI performance-scoring app and a from-scratch Kerbal Space Program mod are both live on GitHub.</p>
+      <p class="pull">Five years owning IT and marketing systems for a real estate brokerage taught me I liked building the tools more than closing the deals. Now I'm working through Harvard Extension School coursework and a <b>Hack The Box Academy CPTS</b> path, while shipping software publicly. Three AI projects are live on GitHub with their evals in the READMEs: an agent-assisted outreach pipeline, a document retrieval tool that byte-checks every citation, and self-healing end-to-end tests. A MIDI performance-scoring app and a from-scratch Kerbal Space Program mod are public too.</p>
     </div>
   </section>
 
@@ -336,8 +336,44 @@
       <div class="section-head">
         <h2 class="section-title">Software I've actually shipped</h2>
       </div>
-      <a class="project-row" href="https://github.com/timlumnah/midi_repinator" target="_blank" rel="noopener">
+      <a class="project-row" href="https://github.com/timlumnah/open_otto" target="_blank" rel="noopener">
         <span class="idx">01</span>
+        <div>
+          <h3>open_otto</h3>
+          <div class="tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">LLM Agents</span><span class="tag">Evals</span><span class="tag">Public Release</span></div>
+          <p>A local-first pipeline tool with an AI assistant, for people working alone: job seekers, gigging musicians, freelancers. It tracks outreach in one SQLite file you own, drafts follow-ups in your voice, and puts every draft in an approval queue. The agent never sends anything on its own. The README ships eval results across four models, including a prompt-injection matrix with measured before/after numbers: the hardening takes the open models from 20/25, 13/25 and 8/25 obeyed injections to 0/25 each, and the paraphrased injections that still get through are published, not hidden.</p>
+          <span class="more">View on GitHub</span>
+        </div>
+      </a>
+      <a class="project-row" href="https://github.com/timlumnah/context_wrangler" target="_blank" rel="noopener">
+        <span class="idx">02</span>
+        <div>
+          <h3>context_wrangler</h3>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Hybrid Retrieval</span><span class="tag">SQLite</span><span class="tag">OCR</span><span class="tag">Evals</span><span class="tag">Public Release</span></div>
+          <p>Point it at a folder of messy PDFs and get answers that cite the exact span in the source document, with every citation byte-checked against the file before it prints. BM25 keyword search and vector search fused with reciprocal rank fusion over one SQLite index, a token-budget context assembler, and a refusal gate enforced in code: if the answer is not in the documents, the tool says so instead of performing confidence. Published eval tables cover scanned documents, table extraction damage, and dollars per 1,000 queries across model tiers, with the inconvenient numbers left in.</p>
+          <span class="more">View on GitHub</span>
+        </div>
+      </a>
+      <a class="project-row" href="https://github.com/timlumnah/test_phoenix" target="_blank" rel="noopener">
+        <span class="idx">03</span>
+        <div>
+          <h3>test_phoenix</h3>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">pytest</span><span class="tag">GitHub Actions</span><span class="tag">Public Source</span></div>
+          <p>Self-healing end-to-end tests for web apps you did not write. An agent explores the app, drafts a Playwright suite, and runs it in CI. When selectors break, a classifier separates selector rot from real regressions, the patcher fixes locators inside an AST-enforced scope, proves the fix with three consecutive green runs, and opens a pull request for a human to merge. Assertions are read-only, so a bot can never "fix" a test until a real bug reads green. The same pipeline drafted a suite against a live third-party site it neither owns nor controls, verified three runs green, twice independently.</p>
+          <span class="more">View on GitHub</span>
+        </div>
+      </a>
+      <a class="project-row" href="https://ottooperator.com" target="_blank" rel="noopener">
+        <span class="idx">04</span>
+        <div>
+          <h3>Otto Operator</h3>
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">AI Agents</span><span class="tag">Paused</span></div>
+          <p>A real estate automation platform I built solo as founder and CTO: MLS ingestion, agent workflows, and billing, with an AI agent layer built from scratch on top of it, a custom tool-calling loop over OpenAI's API, database-backed conversation memory, and schema-repair guardrails for reliable structured output, wired into email and SMS intake. The open_otto, context_wrangler, and test_phoenix repos are the public, runnable spinoffs of what this platform taught me. Currently paused after the brokerage it served merged into a larger firm.</p>
+          <span class="more">View site</span>
+        </div>
+      </a>
+      <a class="project-row" href="https://github.com/timlumnah/midi_repinator" target="_blank" rel="noopener">
+        <span class="idx">05</span>
         <div>
           <h3>Midi Repinator</h3>
           <div class="tags"><span class="tag">C++20</span><span class="tag">JUCE</span><span class="tag">Public Release</span></div>
@@ -346,21 +382,12 @@
         </div>
       </a>
       <a class="project-row" href="https://github.com/timlumnah/kerbal-orbital-kompany" target="_blank" rel="noopener">
-        <span class="idx">02</span>
+        <span class="idx">06</span>
         <div>
           <h3>KoKo (Kerbal Orbital Kompany)</h3>
           <div class="tags"><span class="tag">C#</span><span class="tag">Unity / KSP Modding</span><span class="tag">Public Release</span></div>
           <p>A gameplay overhaul mod for Kerbal Space Program that turns the stock sandbox into a persistent geopolitical, logistical, and military simulation: a campaign engine, a passive business economy, a hostile AI faction with procedurally generated bases, an on-rails weapon system, and a stealth/detection model, all built from scratch. Tagged v0.1.0, playtested end to end, openly documented as beta with known limitations rather than pretending it's finished.</p>
           <span class="more">View on GitHub</span>
-        </div>
-      </a>
-      <a class="project-row" href="https://ottooperator.com" target="_blank" rel="noopener">
-        <span class="idx">03</span>
-        <div>
-          <h3>Otto Operator</h3>
-          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">AI Agents</span><span class="tag">Paused</span></div>
-          <p>A real estate automation platform I built solo as founder and CTO: MLS ingestion, agent workflows, and billing, with an AI agent layer built from scratch on top of it, a custom tool-calling loop over OpenAI's API, database-backed conversation memory, and schema-repair guardrails for reliable structured output, wired into email and SMS intake. Currently paused after the brokerage it served merged into a larger firm.</p>
-          <span class="more">View site</span>
         </div>
       </a>
     </div>

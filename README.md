@@ -16,11 +16,18 @@ One page, six sections:
 
 - **Hero** — name, positioning line, education/stack summary
 - **Now** — short framing statement on where things stand currently
-- **Build** — Midi Repinator, KoKo (Kerbal Orbital Kompany), Otto Operator
+- **Build** — open_otto, context_wrangler, test_phoenix, Otto Operator,
+  Midi Repinator, KoKo (Kerbal Orbital Kompany)
 - **Security** — HTB Academy CPTS, Harvard Extension ethical hacking coursework,
   TryHackMe CTF work, CompTIA Security+
 - **Press** — press mentions from earlier real estate work
 - **Contact** — GitHub, LinkedIn, eBusiness card
+
+Build rows are ordered by current relevance, AI agent work first. Each project's
+copy stays tied to what that repo's README actually claims; never describe local
+work that has not been pushed. test_phoenix is tagged "Public Source" rather than
+"Public Release": its repo is live but the license file (AGPL-3.0) is not added
+yet, unlike open_otto and context_wrangler.
 
 ## Local preview
 
