@@ -5,55 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tim Lumnah: Builder &amp; Security Practitioner</title>
   <meta name="description" content="Tim Lumnah: AI agent tooling, self-healing test automation, and C++/JUCE software, shipped in public on GitHub, plus work toward HTB Academy's CPTS. Projects, hands-on offensive security, and press.">
+  <meta name="theme-color" content="#050c18">
+  <link rel="canonical" href="https://timlumnah.github.io/TimLumnahSite/">
   <meta property="og:title" content="Tim Lumnah: Builder &amp; Security Practitioner">
-  <meta property="og:description" content="Builder and security practitioner. AI agent projects with published evals, software, offensive security work, and press.">
+  <meta property="og:description" content="AI agent systems with guardrails and evals you can rerun, software shipped in public, and offensive security work.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://timlumnah.github.io/TimLumnahSite/">
+  <meta property="og:image" content="https://timlumnah.github.io/TimLumnahSite/img/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tim Lumnah. AI agent systems, measured. Three public AI repos with published evals, a C++ JUCE MIDI scoring app, and an HTB Academy CPTS path in progress.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://timlumnah.github.io/TimLumnahSite/img/og-card.png">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400;1,9..144,500&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #131211;
-      --ink-soft: #201e1c;
-      --paper: #f6f1e6;
-      --paper-soft: #efe7d4;
-      --line: #d9cfb6;
-      --line-dark: #3a3733;
-      --text: #1c1a17;
-      --muted: #6d6559;
-      --muted-dark: #a89f8f;
-      --accent: #ff4d1f;
-      --accent-dim: #c93c14;
-      --cream: #fdfbf6;
+      --bg: #050c18;
+      --bg-2: #07142a;
+      --surface: rgba(10, 24, 46, .55);
+      --line: rgba(120, 170, 255, .22);
+      --line-soft: rgba(120, 170, 255, .12);
+      --text: #e6eefc;
+      --muted: #9fb0cc;
+      --muted-2: #8ea2c2;
+      --blue: #3b82f6;
+      --cyan: #22d3ee;
+      --grad: linear-gradient(90deg, #3b82f6, #22d3ee);
+      --grad-text: linear-gradient(#ffffff, #a9b8d0);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
       margin: 0;
-      background: var(--paper);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
-    h1, h2, h3, blockquote { font-family: 'Space Grotesk', ui-sans-serif, sans-serif; }
     a { color: inherit; }
     img { max-width: 100%; display: block; }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
 
     .wrap { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
     .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
       font-size: .72rem; font-weight: 700;
       letter-spacing: .18em; text-transform: uppercase;
       display: flex; align-items: center; gap: .6rem;
-      margin: 0 0 1.4rem;
+      margin: 0 0 1.4rem; color: var(--muted);
     }
-    .eyebrow .num { color: var(--accent); }
+    .eyebrow .num { color: var(--cyan); }
 
     /* ---------- Masthead ---------- */
     .masthead {
       position: sticky; top: 0; z-index: 50;
-      background: var(--ink);
-      border-bottom: 1px solid var(--line-dark);
+      background: rgba(5, 12, 24, .92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line-soft);
     }
     .masthead .wrap {
       display: flex; align-items: center; justify-content: space-between;
@@ -61,58 +72,71 @@
       gap: 1rem;
     }
     .mark {
-      font-weight: 700; color: var(--cream);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700; color: var(--text);
       letter-spacing: .04em; font-size: .95rem;
       white-space: nowrap;
     }
-    .mark span { color: var(--accent); }
+    .mark span { color: var(--cyan); }
     .masthead nav {
-      display: flex; gap: 1.4rem; flex-wrap: wrap;
+      display: flex; gap: 1.4rem;
+      font-family: 'JetBrains Mono', monospace;
       font-size: .74rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
     }
     .masthead nav a {
-      text-decoration: none; color: var(--muted-dark);
+      text-decoration: none; color: var(--muted-2);
       border-bottom: 2px solid transparent;
       padding-bottom: 3px;
       transition: color .15s ease, border-color .15s ease;
     }
-    .masthead nav a:hover { color: var(--cream); border-color: var(--accent); }
+    .masthead nav a:hover { color: var(--text); border-color: var(--cyan); }
+    @media (max-width: 560px) {
+      .masthead .wrap { gap: .6rem; }
+      .mark { font-size: .82rem; }
+      .masthead nav { gap: .85rem; font-size: .64rem; letter-spacing: .06em; }
+    }
 
     /* ---------- Hero ---------- */
     .hero {
-      background: var(--ink);
-      color: var(--cream);
+      background:
+        radial-gradient(900px 520px at 88% 10%, rgba(34, 211, 238, .18), transparent 60%),
+        radial-gradient(700px 500px at 5% 100%, rgba(59, 130, 246, .16), transparent 60%),
+        linear-gradient(160deg, #050c18, #081a31 75%, #06101f);
       padding: 3.5rem 0 4.5rem;
       position: relative;
       overflow: hidden;
     }
-    .hero .wrap {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      align-items: center;
+    .hero::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(120, 170, 255, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120, 170, 255, .045) 1px, transparent 1px);
+      background-size: 40px 40px;
+      -webkit-mask-image: radial-gradient(ellipse at 60% 40%, #000 30%, transparent 80%);
+      mask-image: radial-gradient(ellipse at 60% 40%, #000 30%, transparent 80%);
     }
+    .hero .wrap { position: relative; display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
     .hero .kicker {
+      font-family: 'JetBrains Mono', monospace;
       font-size: .8rem; font-weight: 700; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--accent);
+      text-transform: uppercase; color: var(--cyan);
       margin: 0 0 1.1rem;
     }
     .hero h1 {
-      font-size: clamp(3rem, 8vw, 5.6rem);
+      font-size: clamp(3.2rem, 9vw, 6.4rem);
       font-weight: 700;
       line-height: .95;
-      letter-spacing: -.01em;
+      letter-spacing: .005em;
       margin: 0 0 1.4rem;
     }
+    .hero h1 .a { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero h1 .b { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .hero .sub {
-      font-family: 'Fraunces', Georgia, serif;
-      font-style: italic;
-      font-weight: 400;
       font-size: clamp(1.1rem, 2.2vw, 1.4rem);
-      color: #ece5d7;
-      max-width: 34rem;
+      color: #cfdcf2;
+      max-width: 36rem;
       margin: 0 0 2rem;
-      line-height: 1.45;
+      line-height: 1.5;
     }
     .hero-actions { display: flex; gap: .8rem; flex-wrap: wrap; }
     .btn {
@@ -122,37 +146,40 @@
       font-weight: 700; font-size: .8rem;
       letter-spacing: .06em; text-transform: uppercase;
       text-decoration: none;
-      border: 2px solid transparent;
+      border: 1.5px solid transparent;
+      border-radius: 10px;
       transition: transform .15s ease, background .15s ease, color .15s ease, border-color .15s ease;
     }
     .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--accent); color: var(--ink); }
-    .btn-primary:hover { background: #ff6a3d; }
-    .btn-ghost { border-color: rgba(253,251,246,.4); color: var(--cream); }
-    .btn-ghost:hover { border-color: var(--cream); }
+    .btn-primary { background: var(--grad); color: #04101f; }
+    .btn-primary:hover { filter: brightness(1.1); }
+    .btn-ghost { border-color: var(--line); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--cyan); }
+
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: .5rem; }
+    .stat { border: 1px solid var(--line); background: var(--surface); border-radius: 14px; padding: 1.1rem 1.3rem; }
+    .stat .num { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; color: var(--cyan); white-space: nowrap; line-height: 1.2; }
+    .stat .cap { margin-top: .25rem; font-size: .92rem; color: var(--muted); line-height: 1.3; }
+    @media (max-width: 760px) { .hero-stats { grid-template-columns: 1fr; } }
 
     .hero-meta {
-      grid-column: 1 / -1;
-      margin-top: 2.6rem;
+      margin-top: .6rem;
       padding-top: 1.5rem;
-      border-top: 1px solid rgba(253,251,246,.15);
+      border-top: 1px solid var(--line-soft);
       display: flex; flex-direction: column; gap: .8rem;
     }
     .hero-meta-row { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: baseline; }
     .hero-meta-label {
+      font-family: 'JetBrains Mono', monospace;
       font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-      color: var(--accent); flex: 0 0 auto;
+      color: var(--cyan); flex: 0 0 auto;
     }
-    .hero-meta-row .hero-meta-text { font-size: .82rem; color: var(--muted-dark); }
+    .hero-meta-row .hero-meta-text { font-size: .95rem; color: var(--muted); }
     .hero-meta-row .tags { display: flex; flex-wrap: wrap; gap: .5rem; }
-    .hero-meta .tag { border-color: var(--line-dark); color: var(--muted-dark); }
 
     /* ---------- Section shells ---------- */
     section { padding: 4.5rem 0; }
-    .on-ink { background: var(--ink); color: var(--cream); }
-    .on-ink .muted { color: var(--muted-dark); }
-    .on-paper { background: var(--paper); }
-    .on-paper-soft { background: var(--paper-soft); }
+    .alt { background: var(--bg-2); }
     .section-head {
       display: flex; align-items: flex-end; justify-content: space-between;
       gap: 1.5rem; flex-wrap: wrap;
@@ -163,123 +190,150 @@
       font-weight: 600;
       margin: 0;
     }
-    .lede {
-      font-family: 'Fraunces', Georgia, serif;
-      font-size: 1.05rem;
-      max-width: 42rem;
-      margin: 0 0 2.6rem;
+    .lede { font-size: 1.1rem; max-width: 42rem; margin: 0 0 2.6rem; color: var(--muted); }
+
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .68rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+      padding: .28rem .7rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
       color: var(--muted);
     }
-    .on-ink .lede { color: #d8d0bf; }
 
-    /* ---------- Now / pull quote ---------- */
+    /* ---------- Now ---------- */
     .pull {
-      font-family: 'Fraunces', Georgia, serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(1.5rem, 3.6vw, 2.4rem);
-      line-height: 1.35;
-      max-width: 46rem;
+      font-size: clamp(1.15rem, 2.3vw, 1.55rem);
+      font-weight: 500;
+      line-height: 1.5;
+      max-width: 52rem;
+      margin: 0;
+      color: #dbe6fa;
     }
-    .pull b { font-style: normal; font-weight: 600; color: var(--accent-dim); }
+    .pull b { font-weight: 700; color: var(--cyan); }
 
     /* ---------- Build / project rows ---------- */
     .project-row {
       display: grid;
-      grid-template-columns: 5rem 1fr;
-      gap: 1.6rem;
+      grid-template-columns: 4.5rem 1fr 400px;
+      gap: 1.8rem;
+      align-items: center;
       padding: 2.2rem 0;
-      border-top: 1px solid var(--line);
+      border-top: 1px solid var(--line-soft);
       text-decoration: none;
       color: inherit;
     }
-    .project-row:last-child { border-bottom: 1px solid var(--line); }
+    .project-row:last-child { border-bottom: 1px solid var(--line-soft); }
     .project-row .idx {
-      font-family: 'Space Grotesk', ui-sans-serif, sans-serif;
-      font-size: 3.4rem;
+      font-size: 3.2rem;
       font-weight: 700;
       color: transparent;
-      -webkit-text-stroke: 1.5px var(--accent);
+      -webkit-text-stroke: 1.5px var(--cyan);
       line-height: 1;
+      align-self: start;
     }
-    .project-row h3 {
-      margin: 0 0 .5rem;
-      font-size: clamp(1.3rem, 3vw, 1.8rem);
-      font-weight: 600;
+    .project-row h3 { margin: 0 0 .6rem; font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 600; }
+    .project-row .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+    .project-row p { margin: 0 0 .8rem; color: var(--muted); max-width: 40rem; font-size: 1rem; line-height: 1.6; }
+    .project-row .metric {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .8rem; line-height: 1.6; color: #b8d9ee;
+      border-left: 2px solid var(--cyan);
+      padding-left: .8rem;
+      margin: 0 0 1rem; max-width: 40rem;
     }
-    .project-row .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .9rem; }
-    .tag {
-      font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
-      padding: .28rem .6rem;
-      border: 1px solid var(--line);
-      color: var(--muted);
-    }
-    .on-ink .tag { border-color: var(--line-dark); color: var(--muted-dark); }
-    .project-row p { margin: 0 0 1rem; color: var(--muted); max-width: 42rem; font-size: .95rem; line-height: 1.65; }
     .project-row .more {
+      font-family: 'JetBrains Mono', monospace;
       font-weight: 700; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase;
-      color: var(--accent-dim);
+      color: var(--cyan);
     }
-    .project-row .more::after { content: " →"; }
-    .project-row:hover .idx { color: var(--accent); -webkit-text-stroke: 0; }
+    .project-row .more::after { content: " \2192"; }
+    .project-row .thumb {
+      border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+      transition: border-color .15s ease, transform .15s ease;
+    }
+    .project-row .thumb img { width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; }
+    .project-row:hover .thumb { border-color: var(--cyan); transform: translateY(-2px); }
+    .project-row:hover .idx { color: var(--cyan); -webkit-text-stroke: 0; }
+    @media (max-width: 1040px) {
+      .project-row { grid-template-columns: 3.5rem 1fr; }
+      .project-row .thumb { grid-column: 1 / -1; grid-row: 1; margin-bottom: .4rem; }
+      .project-row .idx { grid-row: 2; }
+    }
     @media (max-width: 560px) {
-      .project-row { grid-template-columns: 1fr; }
-      .project-row .idx { font-size: 2.4rem; }
+      .project-row { grid-template-columns: 1fr; gap: 1rem; }
+      .project-row .idx { display: none; }
     }
 
     /* ---------- Security dossier ---------- */
-    .dossier { display: flex; flex-direction: column; gap: 1.4rem; }
+    .dossier { display: flex; flex-direction: column; gap: 1.2rem; }
     .dossier-item {
-      border: 1px solid var(--line-dark);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: 14px;
       padding: 1.6rem 1.8rem;
       display: grid; grid-template-columns: 1fr auto; gap: 1rem;
       align-items: flex-start;
     }
     .dossier-item .org {
+      font-family: 'JetBrains Mono', monospace;
       font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-      color: var(--accent); margin: 0 0 .4rem;
+      color: var(--cyan); margin: 0 0 .4rem;
     }
     .dossier-item h3 { margin: 0 0 .6rem; font-size: 1.25rem; font-weight: 600; }
-    .dossier-item p { margin: 0 0 1rem; color: var(--muted-dark); font-size: .92rem; max-width: 40rem; }
+    .dossier-item p { margin: 0 0 1rem; color: var(--muted); font-size: 1rem; max-width: 40rem; }
     .dossier-item .tags { display: flex; flex-wrap: wrap; gap: .5rem; }
     .status {
+      font-family: 'JetBrains Mono', monospace;
       font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-      padding: .35rem .7rem;
+      padding: .35rem .8rem; border-radius: 999px;
       white-space: nowrap; height: fit-content;
     }
-    .status.progress { background: rgba(255,77,31,.16); color: var(--accent); border: 1px solid var(--accent-dim); }
-    .status.done { background: rgba(255,255,255,.08); color: var(--muted-dark); border: 1px solid var(--line-dark); }
+    .status.progress { background: rgba(34, 211, 238, .12); color: var(--cyan); border: 1px solid rgba(34, 211, 238, .5); }
+    .status.done { background: rgba(255, 255, 255, .06); color: var(--muted); border: 1px solid var(--line); }
     @media (max-width: 560px) { .dossier-item { grid-template-columns: 1fr; } }
 
-    /* ---------- Before / press (quieter) ---------- */
+    /* ---------- Press (quieter) ---------- */
     .clip-list { display: flex; flex-direction: column; }
     .clip {
       display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
       padding: .95rem 0;
-      border-bottom: 1px solid var(--line);
-      text-decoration: none; color: inherit;
-      font-size: .88rem;
+      border-bottom: 1px solid var(--line-soft);
+      flex-wrap: wrap;
     }
-    .clip:hover .clip-title { color: var(--accent-dim); }
-    .clip .clip-pub { color: var(--muted); flex: 0 0 auto; font-size: .74rem; letter-spacing: .04em; text-transform: uppercase; }
-    .clip-title { font-family: 'Space Grotesk', ui-sans-serif, sans-serif; font-size: 1rem; font-weight: 500; flex: 1; padding: 0 1rem; }
-    .clip .clip-arrow { color: var(--muted); }
+    .clip a { text-decoration: none; }
+    .clip .clip-pub {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--muted-2); flex: 0 0 9.5rem; font-size: .74rem; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .clip-title { font-size: 1.05rem; font-weight: 500; flex: 1 1 18rem; }
+    .clip-title:hover { color: var(--cyan); }
+    .clip-also {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .72rem; color: var(--muted-2); letter-spacing: .03em;
+    }
+    .clip-also:hover { color: var(--cyan); }
+    @media (max-width: 560px) { .clip .clip-pub { flex-basis: 100%; } }
 
     /* ---------- Contact / footer ---------- */
     .contact h2 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 700; margin: 0 0 1.5rem; }
     .contact-links { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-bottom: 3rem; }
     .contact-links a {
+      font-family: 'JetBrains Mono', monospace;
       text-decoration: none;
       font-weight: 700; font-size: .95rem; letter-spacing: .04em; text-transform: uppercase;
-      border-bottom: 2px solid var(--accent);
+      border-bottom: 2px solid var(--cyan);
       padding-bottom: 3px;
     }
+    .contact-links a:hover { color: var(--cyan); }
     footer.bottom {
-      border-top: 1px solid var(--line-dark);
+      font-family: 'JetBrains Mono', monospace;
+      border-top: 1px solid var(--line-soft);
       padding-top: 1.6rem;
-      font-size: .76rem; color: var(--muted-dark);
+      font-size: .76rem; color: var(--muted-2);
       display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem;
     }
+    :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
   </style>
 </head>
 <body>
@@ -300,13 +354,18 @@
     <div class="wrap">
       <div>
         <p class="kicker">Software Builder · Security Practitioner</p>
-        <h1>Tim<br>Lumnah</h1>
+        <h1><span class="a">Tim</span><br><span class="b">Lumnah</span></h1>
         <p class="sub">I build AI agent systems with guardrails and evals you can rerun, ship real software in the open, and work toward Hack&nbsp;The&nbsp;Box Academy's CPTS. Methodology and reporting included, not just the shell.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#build">See the work</a>
           <a class="btn btn-ghost" href="https://github.com/timlumnah" target="_blank" rel="noopener">GitHub</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/tim-lumnah" target="_blank" rel="noopener">LinkedIn</a>
         </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="num">3</div><div class="cap">public AI repos, evals published in the READMEs</div></div>
+        <div class="stat"><div class="num">12/15 → 0/15</div><div class="cap">evasive prompt injections obeyed, with a guard model (llama-8b)</div></div>
+        <div class="stat"><div class="num">274/274</div><div class="cap">cited spans byte-verified against the source files</div></div>
       </div>
       <div class="hero-meta">
         <div class="hero-meta-row">
@@ -323,14 +382,14 @@
     </div>
   </header>
 
-  <section id="now" class="on-paper">
+  <section id="now">
     <div class="wrap">
       <p class="eyebrow"><span class="num">01</span> Now</p>
       <p class="pull">Five years owning IT and marketing systems for a real estate brokerage taught me I liked building the tools more than closing the deals. Now I'm working through Harvard Extension School coursework and a <b>Hack The Box Academy CPTS</b> path, while shipping software publicly. Three AI projects are live on GitHub with their evals in the READMEs: an agent-assisted outreach pipeline, a document retrieval tool that byte-checks every citation, and self-healing end-to-end tests, plus a C++ MIDI performance-scoring app.</p>
     </div>
   </section>
 
-  <section id="build" class="on-paper-soft">
+  <section id="build" class="alt">
     <div class="wrap">
       <p class="eyebrow"><span class="num">02</span> Build</p>
       <div class="section-head">
@@ -341,50 +400,60 @@
         <div>
           <h3>Open Otto</h3>
           <div class="tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">LLM Agents</span><span class="tag">Evals</span><span class="tag">Public Release</span></div>
-          <p>A local-first pipeline tool with an AI assistant, for people working alone: job seekers, gigging musicians, freelancers. It tracks outreach in one SQLite file you own, drafts follow-ups in your voice, and puts every draft in an approval queue. The agent never sends anything on its own. The README ships eval results across four models, including a prompt-injection matrix with measured before/after numbers: the hardening takes the open models from 20/25, 13/25 and 8/25 obeyed injections to 0/25 each, and the paraphrased injections that still get through are published, not hidden.</p>
+          <p>A local-first pipeline tracker with an AI assistant, for job seekers, gigging musicians, and freelancers. The agent drafts follow-ups in your voice and queues them for approval; it never sends anything on its own.</p>
+          <p class="metric">Prompt-injection evals across four models. Hardening cuts detectable injections to 0/25; a guard model takes evasive ones from 12/15 to 0/15 (llama-8b). The weak spots are published.</p>
           <span class="more">View on GitHub</span>
         </div>
+        <div class="thumb"><img src="img/open_otto.webp" width="960" height="480" loading="lazy" alt="Open Otto: AI outreach drafts, measured. 12/15 to 0/15 evasive injections obeyed, 4 models scored, 289 tests."></div>
       </a>
       <a class="project-row" href="https://github.com/timlumnah/context_wrangler" target="_blank" rel="noopener">
         <span class="idx">02</span>
         <div>
           <h3>Context Wrangler</h3>
           <div class="tags"><span class="tag">Python</span><span class="tag">Hybrid Retrieval</span><span class="tag">SQLite</span><span class="tag">OCR</span><span class="tag">Evals</span><span class="tag">Public Release</span></div>
-          <p>Point it at a folder of messy PDFs and get answers that cite the exact span in the source document, with every citation byte-checked against the file before it prints. BM25 keyword search and vector search fused with reciprocal rank fusion over one SQLite index, a token-budget context assembler, and a refusal gate enforced in code: if the answer is not in the documents, the tool says so instead of performing confidence. Published eval tables cover scanned documents, table extraction damage, and dollars per 1,000 queries across model tiers, with the inconvenient numbers left in.</p>
+          <p>Point it at a folder of messy PDFs and get answers that cite the exact span in the source, byte-checked before they print. BM25 and vector search fused over one SQLite index, with a refusal gate enforced in code: if it is not in the documents, the tool says so.</p>
+          <p class="metric">Table reflow lifted table-row retrieval from 0.000 to 1.000. 274 of 274 cited spans verify. The full API tier costs $0.22 per 1,000 queries, metered, not modeled.</p>
           <span class="more">View on GitHub</span>
         </div>
+        <div class="thumb"><img src="img/context_wrangler.webp" width="960" height="480" loading="lazy" alt="Context Wrangler: cited document answers, measured. Table-row retrieval 0 to 1.000, 274 of 274 cited spans byte-verified, $0.22 per 1k queries."></div>
       </a>
       <a class="project-row" href="https://github.com/timlumnah/test_phoenix" target="_blank" rel="noopener">
         <span class="idx">03</span>
         <div>
           <h3>Test Phoenix</h3>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">pytest</span><span class="tag">GitHub Actions</span><span class="tag">Public Source</span></div>
-          <p>Self-healing end-to-end tests for web apps you did not write. An agent explores the app, drafts a Playwright suite, and runs it in CI. When selectors break, a classifier separates selector rot from real regressions, the patcher fixes locators inside an AST-enforced scope, proves the fix with three consecutive green runs, and opens a pull request for a human to merge. Assertions are read-only, so a bot can never "fix" a test until a real bug reads green. The same pipeline drafted a suite against a live third-party site it neither owns nor controls, verified three runs green, twice independently.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">pytest</span><span class="tag">GitHub Actions</span><span class="tag">Public Release</span></div>
+          <p>Self-healing end-to-end tests for web apps you did not write. A classifier separates selector rot from real regressions; the patcher edits locators only, inside an AST-enforced scope, and a fix counts after three consecutive green runs. A human merges.</p>
+          <p class="metric">5/5 failures classified correctly, both planted regressions refused. A suite drafted against a live third-party site passed three runs green, twice.</p>
           <span class="more">View on GitHub</span>
         </div>
+        <div class="thumb"><img src="img/test_phoenix.webp" width="960" height="480" loading="lazy" alt="Test Phoenix: self-healing end-to-end tests, measured. 5 of 5 failures classified, 2 of 2 planted regressions refused, 3 green runs before a patch counts."></div>
       </a>
       <a class="project-row" href="https://ottooperator.com" target="_blank" rel="noopener">
         <span class="idx">04</span>
         <div>
           <h3>Otto Operator</h3>
           <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">AI Agents</span><span class="tag">Paused</span></div>
-          <p>A real estate automation platform I built solo as founder and CTO: MLS ingestion, agent workflows, and billing, with an AI agent layer built from scratch on top of it, a custom tool-calling loop over OpenAI's API, database-backed conversation memory, and schema-repair guardrails for reliable structured output, wired into email and SMS intake. The Open Otto, Context Wrangler, and Test Phoenix repos are the public, runnable spinoffs of what this platform taught me. Currently paused after the brokerage it served merged into a larger firm.</p>
+          <p>A real estate automation platform I built solo as founder and CTO: MLS ingestion, agent workflows, billing, and an AI agent layer with a custom tool-calling loop, database-backed memory, and schema-repair guardrails, wired into email and SMS intake.</p>
+          <p class="metric">The three public repos above are runnable spinoffs of what it taught me. Paused after the brokerage it served merged into a larger firm.</p>
           <span class="more">View site</span>
         </div>
+        <div class="thumb"><img src="img/otto_operator.webp" width="960" height="480" loading="lazy" alt="Otto Operator: real estate automation platform. Built solo as founder and CTO, with MLS ingestion, agent workflows, and a tool-calling agent loop."></div>
       </a>
       <a class="project-row" href="https://github.com/timlumnah/midi_repinator" target="_blank" rel="noopener">
         <span class="idx">05</span>
         <div>
           <h3>Midi Repinator</h3>
           <div class="tags"><span class="tag">C++20</span><span class="tag">JUCE</span><span class="tag">Public Release</span></div>
-          <p>Scores a live MIDI performance against a master take, note by note, using a chord-aware alignment algorithm, then schedules future practice with a forgetting-curve model borrowed from spaced-repetition learning. Two build targets, a console engine and a five-page JUCE GUI, actively maintained since its v0.1.0 release.</p>
+          <p>Scores a live MIDI performance against a master take, note by note, with a chord-aware alignment algorithm, then schedules practice with a forgetting-curve model borrowed from spaced repetition.</p>
+          <p class="metric">A console engine plus a five-page JUCE GUI, actively maintained since its v0.1.0 release.</p>
           <span class="more">View on GitHub</span>
         </div>
+        <div class="thumb"><img src="img/midi_repinator.webp" width="960" height="480" loading="lazy" alt="Midi Repinator: repertoire practice, measured. A piano-roll scoring view showing note, rhythm, and tempo accuracy."></div>
       </a>
     </div>
   </section>
 
-  <section id="security" class="on-ink">
+  <section id="security">
     <div class="wrap">
       <p class="eyebrow"><span class="num">03</span> Security</p>
       <div class="section-head">
@@ -432,7 +501,7 @@
     </div>
   </section>
 
-  <section id="before" class="on-paper">
+  <section id="before" class="alt">
     <div class="wrap">
       <p class="eyebrow"><span class="num">04</span> Press</p>
       <div class="section-head">
@@ -440,23 +509,21 @@
       </div>
       <p class="lede" style="margin-bottom:1.8rem;">A handful of press mentions from earlier work.</p>
       <div class="clip-list">
-        <a class="clip" href="https://www.realtor.com/advice/buy/reasons-pending-sales-fall-through-in-real-estate/" target="_blank" rel="noopener">
-          <span class="clip-pub">Realtor.com</span><span class="clip-title">5 Reasons Pending Sales Fall Through in Real Estate</span><span class="clip-arrow">→</span>
-        </a>
-        <a class="clip" href="https://finance.yahoo.com/news/gen-z-millennials-destined-live-150029553.html" target="_blank" rel="noopener">
-          <span class="clip-pub">Yahoo Finance</span><span class="clip-title">Are Gen Z and Millennials Destined To Live With Roommates Forever?</span><span class="clip-arrow">→</span>
-        </a>
-        <a class="clip" href="https://www.gobankingrates.com/money/financial-planning/are-gen-z-millennials-destined-to-live-with-roommates-forever/" target="_blank" rel="noopener">
-          <span class="clip-pub">GO BankingRates</span><span class="clip-title">Are Gen Z and Millennials Destined To Live With Roommates Forever?</span><span class="clip-arrow">→</span>
-        </a>
-        <a class="clip" href="https://massbuyeragents.org/massachusetts-real-estate-agents/2022/07/08/reasons-pending-sales-fall-through-in-real-estate-massachusetts-homebuyers-homeownership-2/" target="_blank" rel="noopener">
-          <span class="clip-pub">MA Assn. of Buyer Agents</span><span class="clip-title">Reasons Pending Sales Fall Through in Real Estate</span><span class="clip-arrow">→</span>
-        </a>
+        <div class="clip">
+          <span class="clip-pub">Realtor.com</span>
+          <a class="clip-title" href="https://www.realtor.com/advice/buy/reasons-pending-sales-fall-through-in-real-estate/" target="_blank" rel="noopener">5 Reasons Pending Sales Fall Through in Real Estate</a>
+          <a class="clip-also" href="https://massbuyeragents.org/massachusetts-real-estate-agents/2022/07/08/reasons-pending-sales-fall-through-in-real-estate-massachusetts-homebuyers-homeownership-2/" target="_blank" rel="noopener">also: MA Assn. of Buyer Agents →</a>
+        </div>
+        <div class="clip">
+          <span class="clip-pub">Yahoo Finance</span>
+          <a class="clip-title" href="https://finance.yahoo.com/news/gen-z-millennials-destined-live-150029553.html" target="_blank" rel="noopener">Are Gen Z and Millennials Destined To Live With Roommates Forever?</a>
+          <a class="clip-also" href="https://www.gobankingrates.com/money/financial-planning/are-gen-z-millennials-destined-to-live-with-roommates-forever/" target="_blank" rel="noopener">also: GO BankingRates →</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="on-ink contact">
+  <section id="contact" class="contact">
     <div class="wrap">
       <p class="eyebrow"><span class="num">05</span> Contact</p>
       <h2>Let's talk.</h2>
