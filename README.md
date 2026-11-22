@@ -16,8 +16,8 @@ One page, six sections:
 
 - **Hero** — name, positioning line, education/stack summary
 - **Now** — short framing statement on where things stand currently
-- **Build** — open_otto, context_wrangler, test_phoenix, Otto Operator,
-  Midi Repinator, KoKo (Kerbal Orbital Kompany)
+- **Build** — Open Otto, Context Wrangler, Test Phoenix, Otto Operator,
+  Midi Repinator
 - **Security** — HTB Academy CPTS, Harvard Extension ethical hacking coursework,
   TryHackMe CTF work, CompTIA Security+
 - **Press** — press mentions from earlier real estate work
