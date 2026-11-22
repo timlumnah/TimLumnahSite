@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tim Lumnah: Builder &amp; Security Practitioner</title>
-  <meta name="description" content="Tim Lumnah: AI agent tooling, self-healing test automation, and C++/JUCE software, shipped in public on GitHub, plus work toward HTB Academy's CPTS. Projects, hands-on offensive security, and press.">
+  <title>Tim Lumnah: AI Automation &amp; Agent Developer</title>
+  <meta name="description" content="Tim Lumnah: AI agent tooling with published evals, self-healing test automation, and C++/JUCE software, shipped in public on GitHub. Projects and AI and offensive security work.">
   <meta name="theme-color" content="#050c18">
   <link rel="canonical" href="https://timlumnah.github.io/TimLumnahSite/">
-  <meta property="og:title" content="Tim Lumnah: Builder &amp; Security Practitioner">
-  <meta property="og:description" content="AI agent systems with guardrails and evals you can rerun, software shipped in public, and offensive security work.">
+  <meta property="og:title" content="Tim Lumnah: AI Automation &amp; Agent Developer">
+  <meta property="og:description" content="AI agent systems with guardrails and evals you can rerun, tested against prompt injection, and software shipped in public.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://timlumnah.github.io/TimLumnahSite/">
   <meta property="og:image" content="https://timlumnah.github.io/TimLumnahSite/img/og-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Tim Lumnah. AI agent systems, measured. Three public AI repos with published evals, a C++ JUCE MIDI scoring app, and an HTB Academy CPTS path in progress.">
+  <meta property="og:image:alt" content="Tim Lumnah. AI agent systems, measured. Three public AI repos with published evals, a C++ JUCE MIDI scoring app, and evasive prompt injections obeyed cut from 12 of 15 to 0 of 15 with a guard model.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://timlumnah.github.io/TimLumnahSite/img/og-card.png">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
@@ -291,29 +291,9 @@
     }
     .status.progress { background: rgba(34, 211, 238, .12); color: var(--cyan); border: 1px solid rgba(34, 211, 238, .5); }
     .status.done { background: rgba(255, 255, 255, .06); color: var(--muted); border: 1px solid var(--line); }
+    a.dossier-item { text-decoration: none; color: inherit; transition: border-color .15s ease; }
+    a.dossier-item:hover { border-color: var(--cyan); }
     @media (max-width: 560px) { .dossier-item { grid-template-columns: 1fr; } }
-
-    /* ---------- Press (quieter) ---------- */
-    .clip-list { display: flex; flex-direction: column; }
-    .clip {
-      display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
-      padding: .95rem 0;
-      border-bottom: 1px solid var(--line-soft);
-      flex-wrap: wrap;
-    }
-    .clip a { text-decoration: none; }
-    .clip .clip-pub {
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--muted-2); flex: 0 0 9.5rem; font-size: .74rem; letter-spacing: .04em; text-transform: uppercase;
-    }
-    .clip-title { font-size: 1.05rem; font-weight: 500; flex: 1 1 18rem; }
-    .clip-title:hover { color: var(--cyan); }
-    .clip-also {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .72rem; color: var(--muted-2); letter-spacing: .03em;
-    }
-    .clip-also:hover { color: var(--cyan); }
-    @media (max-width: 560px) { .clip .clip-pub { flex-basis: 100%; } }
 
     /* ---------- Contact / footer ---------- */
     .contact h2 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 700; margin: 0 0 1.5rem; }
@@ -344,7 +324,6 @@
         <a href="#now">Now</a>
         <a href="#build">Build</a>
         <a href="#security">Security</a>
-        <a href="#before">Press</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -353,9 +332,9 @@
   <header class="hero">
     <div class="wrap">
       <div>
-        <p class="kicker">Software Builder · Security Practitioner</p>
+        <p class="kicker">AI Automation &amp; Agent Developer · Cybersecurity</p>
         <h1><span class="a">Tim</span><br><span class="b">Lumnah</span></h1>
-        <p class="sub">I build AI agent systems with guardrails and evals you can rerun, ship real software in the open, and work toward Hack&nbsp;The&nbsp;Box Academy's CPTS. Methodology and reporting included, not just the shell.</p>
+        <p class="sub">I build AI agent systems with guardrails and evals you can rerun, test them the way an attacker would, and ship real software in the open. Methodology and measured results, not just a demo.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#build">See the work</a>
           <a class="btn btn-ghost" href="https://github.com/timlumnah" target="_blank" rel="noopener">GitHub</a>
@@ -385,7 +364,7 @@
   <section id="now">
     <div class="wrap">
       <p class="eyebrow"><span class="num">01</span> Now</p>
-      <p class="pull">Five years owning IT and marketing systems for a real estate brokerage taught me I liked building the tools more than closing the deals. Now I'm working through Harvard Extension School coursework and a <b>Hack The Box Academy CPTS</b> path, while shipping software publicly. Three AI projects are live on GitHub with their evals in the READMEs: an agent-assisted outreach pipeline, a document retrieval tool that byte-checks every citation, and self-healing end-to-end tests, plus a C++ MIDI performance-scoring app.</p>
+      <p class="pull">Five years owning IT and marketing systems for a real estate brokerage taught me I liked building the tools more than closing the deals. Now I'm working through Harvard Extension School coursework while shipping software publicly. <b>Three AI projects are live on GitHub with their evals in the READMEs</b>: an agent-assisted outreach pipeline, a document retrieval tool that byte-checks every citation, and self-healing end-to-end tests, plus a C++ MIDI performance-scoring app. On the security side, I'm working toward Hack The Box Academy's CPTS.</p>
     </div>
   </section>
 
@@ -432,7 +411,7 @@
         <span class="idx">04</span>
         <div>
           <h3>Otto Operator</h3>
-          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">AI Agents</span><span class="tag">Paused</span></div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">AI Agents</span><span class="tag">Closed Source</span><span class="tag">Paused</span></div>
           <p>A real estate automation platform I built solo as founder and CTO: MLS ingestion, agent workflows, billing, and an AI agent layer with a custom tool-calling loop, database-backed memory, and schema-repair guardrails, wired into email and SMS intake.</p>
           <p class="metric">The three public repos above are runnable spinoffs of what it taught me. Paused after the brokerage it served merged into a larger firm.</p>
           <span class="more">View site</span>
@@ -457,10 +436,19 @@
     <div class="wrap">
       <p class="eyebrow"><span class="num">03</span> Security</p>
       <div class="section-head">
-        <h2 class="section-title">Offensive security, done properly</h2>
+        <h2 class="section-title">Security, offense and AI</h2>
       </div>
-      <p class="lede">I got into this through a single Kali Linux class and haven't stopped. Every engagement below follows real methodology and ends in a written report, because in actual pentest work, the report is the deliverable, not the shell.</p>
+      <p class="lede">I got into offensive security through a single Kali Linux class and haven't stopped, and I now test the AI systems I build the same way, which is the first card. The pentest work below follows real methodology and ends in a written report, because in actual pentest work, the report is the deliverable, not the shell.</p>
       <div class="dossier">
+        <a class="dossier-item" href="https://github.com/timlumnah/open_otto" target="_blank" rel="noopener">
+          <div>
+            <p class="org">Open Otto, public repo</p>
+            <h3>AI security: prompt-injection evals</h3>
+            <p>Planted and paraphrased prompt injections scored across four models, with a regex filter and a guard model each measured against them. Hardening cuts detectable injections to 0/25 obeyed; the guard takes evasive ones from 12/15 to 0/15 (llama-8b). The misses are published.</p>
+            <div class="tags"><span class="tag">Prompt Injection</span><span class="tag">LLM Evals</span><span class="tag">Guardrails</span></div>
+          </div>
+          <span class="status progress">Shipped</span>
+        </a>
         <div class="dossier-item">
           <div>
             <p class="org">Hack The Box Academy</p>
@@ -501,31 +489,9 @@
     </div>
   </section>
 
-  <section id="before" class="alt">
+  <section id="contact" class="contact alt">
     <div class="wrap">
-      <p class="eyebrow"><span class="num">04</span> Press</p>
-      <div class="section-head">
-        <h2 class="section-title" style="font-size: clamp(1.4rem, 3vw, 1.9rem);">In the news</h2>
-      </div>
-      <p class="lede" style="margin-bottom:1.8rem;">A handful of press mentions from earlier work.</p>
-      <div class="clip-list">
-        <div class="clip">
-          <span class="clip-pub">Realtor.com</span>
-          <a class="clip-title" href="https://www.realtor.com/advice/buy/reasons-pending-sales-fall-through-in-real-estate/" target="_blank" rel="noopener">5 Reasons Pending Sales Fall Through in Real Estate</a>
-          <a class="clip-also" href="https://massbuyeragents.org/massachusetts-real-estate-agents/2022/07/08/reasons-pending-sales-fall-through-in-real-estate-massachusetts-homebuyers-homeownership-2/" target="_blank" rel="noopener">also: MA Assn. of Buyer Agents →</a>
-        </div>
-        <div class="clip">
-          <span class="clip-pub">Yahoo Finance</span>
-          <a class="clip-title" href="https://finance.yahoo.com/news/gen-z-millennials-destined-live-150029553.html" target="_blank" rel="noopener">Are Gen Z and Millennials Destined To Live With Roommates Forever?</a>
-          <a class="clip-also" href="https://www.gobankingrates.com/money/financial-planning/are-gen-z-millennials-destined-to-live-with-roommates-forever/" target="_blank" rel="noopener">also: GO BankingRates →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="wrap">
-      <p class="eyebrow"><span class="num">05</span> Contact</p>
+      <p class="eyebrow"><span class="num">04</span> Contact</p>
       <h2>Let's talk.</h2>
       <div class="contact-links">
         <a href="https://github.com/timlumnah" target="_blank" rel="noopener">GitHub</a>

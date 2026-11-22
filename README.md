@@ -14,15 +14,16 @@ never actually applies. That's expected, not a bug.
 
 ## Structure
 
-One page, six sections:
+One page, five sections:
 
-- **Hero** — name, positioning line, three headline numbers, education/stack summary
+- **Hero** — name, "AI Automation & Agent Developer · Cybersecurity" kicker (mirrors the LinkedIn headline), positioning line, three headline numbers, education/stack summary
 - **Now** — short framing statement on where things stand currently
 - **Build** — Open Otto, Context Wrangler, Test Phoenix, Otto Operator,
   Midi Repinator
-- **Security** — HTB Academy CPTS, Harvard Extension ethical hacking coursework,
-  TryHackMe CTF work, CompTIA Security+
-- **Press** — press mentions from earlier real estate work
+- **Security** — AI security first (open_otto prompt-injection evals), then HTB Academy
+  CPTS, Harvard Extension ethical hacking coursework, TryHackMe CTF work, CompTIA
+  Security+. Kept in the nav but deliberately not in the hero headline: the job-search
+  traction is AI and automation, and the AI-security work is the bridge between the two
 - **Contact** — GitHub, LinkedIn, eBusiness card
 
 Build rows are ordered by current relevance, AI agent work first. Each project's
@@ -34,7 +35,6 @@ Images live in `img/`: `og-card.png` (1200x630 share card, referenced by an
 absolute `og:image` URL on timlumnah.github.io/TimLumnahSite, since timlumnah.com
 forwards there) and one 960x480 `.webp` thumbnail per Build row. Every number on
 the hero tiles, Build rows, and cards is copied from the matching repo README.
-Press shows two entries, each with its syndicated copy as an "also" link.
 
 ## Local preview
 
@@ -62,10 +62,12 @@ revisited:
   finished) when that changes.
 - Otto Operator is marked "Paused" in the Build section. Update if that
   changes.
-- Project links (GitHub repos, ottooperator.com, press articles) should be
+- Project links (GitHub repos, ottooperator.com) should be
   spot-checked occasionally since dead links have been pruned from here
   before.
 
 ## Deployment
 
 Pushes to `main` deploy automatically via GitHub Pages.
+
+A Press section (real-estate mentions from the brokerage years) was removed 2026-11-22: it was off-lane for AI and security readers. It is in git history if it is ever wanted back.
