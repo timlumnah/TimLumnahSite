@@ -32,8 +32,8 @@ work that has not been pushed. All three AI repos are tagged "Public Release",
 which needs each repo's LICENSE file (AGPL-3.0) to be pushed first.
 
 Images live in `img/`: `og-card.png` (1200x630 share card, referenced by an
-absolute `og:image` URL on timlumnah.github.io/TimLumnahSite, since timlumnah.com
-forwards there) and one 960x480 `.webp` thumbnail per Build row. Every number on
+absolute `og:image` URL on https://timlumnah.com, bound as a GitHub Pages custom domain
+2026-11-22; the old github.io project URL redirects to it) and one 960x480 `.webp` thumbnail per Build row. Every number on
 the hero tiles, Build rows, and cards is copied from the matching repo README.
 
 ## Local preview
